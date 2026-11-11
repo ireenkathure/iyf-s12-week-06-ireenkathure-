@@ -18,3 +18,5 @@ Search any city to see live weather: temperature, feels like, humidity, wind, pr
 - `async-practice.js` — Lesson 11 practice
 - `daily-challenges/` — Daily challenges
 - `.github/workflows/deploy.yml` — Deploys to GitHub Pages, injects API key from Secret
+- ## Live Demo
+https://ireenkathure.github.io/iyf-s12-week-06-ireenkathure-/
