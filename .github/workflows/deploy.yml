@@ -1,0 +1,54 @@
+YESSS! *5 Commits* ✅ You just hit the Git requirement! `app.js` is in!
+
+Now we need the 2 files that make the LIVE site work without leaking your key:
+
+*File 6: `config.example.js`*
+
+*1.* Click *+* > *Create new file*
+*2.* Filename: `config.example.js`
+*3.* Paste this — note EMPTY key, this is safe to commit:
+const API_KEY = "YOUR_API_KEY_HERE";
+*4.* Commit changes
+
+---
+
+*File 7: `.github/workflows/deploy.yml` — THIS is the magic for live site*
+
+*1.* Click *+* > *Create new file*
+*2.* Filename: `.github/workflows/deploy.yml` — type it exactly, GitHub will create folders automatically
+*3.* Paste ALL of this:
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Inject API key
+        run: echo "const API_KEY = \"${{ secrets.OPENWEATHER_API_KEY }}\";" > config.js
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+*4.* Commit changes
+
+Tell me "done config + deploy" and I'll walk you through adding the SECRET + turning on Pages — that's the last step to go LIVE!
