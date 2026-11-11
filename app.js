@@ -73,3 +73,4 @@ cityInput.addEventListener("keydown", (e) => {
 
 renderHistory();
  
+// force rebuild
