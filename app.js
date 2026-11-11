@@ -1,11 +1,4 @@
-PERFECT! *4 Commits* ✅ `styles.css` is in! One more commit and you hit the 5+ commits for Git marks!
 
-Now the BIG one — File 5: `app.js`
-This is where the marker checks async/await, try/catch, http://response.ok, Loading, localStorage.
-
-*1.* Click *+* > *Create new file*
-*2.* Filename: `app.js`
-*3.* Copy-paste ALL of this:
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
 const statusEl = document.getElementById("status");
