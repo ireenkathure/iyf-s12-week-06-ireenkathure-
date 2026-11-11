@@ -72,6 +72,4 @@ cityInput.addEventListener("keydown", (e) => {
 });
 
 renderHistory();
-*4.* Commit changes
-
-Tell me "done http://app.js" and I'll give you `config.example.js` + `deploy.yml` — then we add the Secret and go LIVE!
+ 
