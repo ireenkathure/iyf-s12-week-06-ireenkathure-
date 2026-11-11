@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 Weather Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="container">
+<h1>🌤️ Weather Dashboard</h1>
+<p>Search any city to see live weather</p>
+<div class="search-box">
+<input type="text" id="cityInput" placeholder="Enter city e.g. Eldoret, Nairobi, London">
+<button id="searchBtn">Search</button>
+</div>
+<div id="history"></div>
+<p id="status"></p>
+<section id="weatherCard" class="card hidden">
+<h2 id="cityName"></h2>
+<img id="weatherIcon" alt="Weather icon">
+<p class="temp"><span id="temp"></span>°C</p>
+<p id="description"></p>
+<p>Feels like: <span id="feelsLike"></span>°C</p>
+<p>Humidity: <span id="humidity"></span>%</p>
+<p>Wind: <span id="wind"></span> m/s</p>
+<p>Pressure: <span id="pressure"></span> hPa</p>
+</section>
+</main>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
